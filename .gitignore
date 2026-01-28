@@ -1,0 +1,6 @@
+pdf_files/
+misc/
+.venv/
+*.egg-info/
+chroma_store/
+__pycache__/

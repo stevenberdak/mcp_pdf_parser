@@ -1,0 +1,22 @@
+[project]
+name = "mcp-pdf"
+version = "0.1.0"
+description = "Local MCP-style PDF ingestion, vectorization, and querying (Chroma + sentence-transformers)."
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "pydantic",
+  "langchain-community",
+  "langchain-core",
+  "langchain-text-splitters",
+  "pypdf",
+  "chromadb",
+  "sentence-transformers",
+]
+
+[project.scripts]
+mcp-pdf = "mcp_pdf.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
