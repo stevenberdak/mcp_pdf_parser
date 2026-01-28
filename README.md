@@ -11,6 +11,8 @@ stevenberdak@gmail.com
 
 This repository was developed alongside an LLM in response to emerging requirements encountered while studying **RAG-based text generation**, **large language models**, and the **MCP design pattern**. It is intended to serve as a foundation for exploring and experimenting with LLM-related features and workflows.
 
+This repository is designed to have QoL features such as using incremental updates (skipping unchanged files), deleting stale chunks from the vector store, storing chunks with stable ids and returning citiations from the source context. It also contains both a command line and a FastAPI webserver interface for retrieving context.
+
 While the repository does not include code for parsing vector store results directly through an LLM, it provides all the necessary components to enable such integration. For example, an LLM (such as one running via **Ollama**) can be layered on top to parse retrieved context from the **Chroma** vector store and generate coherent, context-aware text responses.
 
 Query results are returned in **JSON format**, containing structured data that an LLM can consume to generate rich, contextual responses based on user-provided PDF documents.
